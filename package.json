@@ -2,12 +2,15 @@
   "name": "@template/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky"
+  },
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
     "@nx/js": "18.2.4",
     "@nx/workspace": "18.2.4",
+    "husky": "^9.0.11",
     "nx": "18.2.4"
   }
 }
