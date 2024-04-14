@@ -1,0 +1,9 @@
+{
+  "name": "commit-rules",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "commit-rules/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project commit-rules --web",
+  "targets": {}
+}
