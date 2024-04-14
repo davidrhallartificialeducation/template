@@ -16,7 +16,27 @@
     "baseUrl": ".",
     "paths": {
       "@template/commit-rules": ["commit-rules/src/index.ts"]
-    }
+    },
+    // Type Checking https://www.typescriptlang.org/tsconfig#Type_Checking_6248
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false, // Labels are very rare in JavaScript and typically indicate an attempt to write an object literal
+    "alwaysStrict": true, // improves performance and throws errors instead of silencing them
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true, // avoids case fallthrough bug
+    "noImplicitAny": true, // avoids errors being missed
+    "noImplicitOverride": true, // must 'override' a method from a parent class
+    "noImplicitReturns": true, // all code paths must return a value
+    "noImplicitThis": true, // this must be explicitly typed and cannot be any
+    "noPropertyAccessFromIndexSignature": true, // unknown properties must be accessed through an index signature ["key"]
+    "noUncheckedIndexedAccess": true, // ensures that indexed access expressions are safe
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictBindCallApply": true, // ensures that bind, call, and apply methods are called with the correct arguments
+    "strictFunctionTypes": true, // ensures that functions have correctly typed arguments
+    "strictNullChecks": true, // ensures that null and undefined are not assigned to variables unless explicitly allowed
+    "strictPropertyInitialization": true, // ensures that class properties are initialized in the constructor,
+    "useUnknownInCatchVariables": true
   },
   "exclude": ["node_modules", "tmp"]
 }
