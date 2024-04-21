@@ -8,13 +8,31 @@
       "rules": {
         "@nx/enforce-module-boundaries": [
           "error",
-          {
-            "enforceBuildableLibDependency": true,
+          { // https://nx.dev/nx-api/eslint-plugin/documents/enforce-module-boundaries
             "allow": [],
+            "banTransitiveDependencies": true, // https://blog.nrwl.io/mastering-the-project-boundaries-in-nx-f095852f5bf4
+            "checkNestedExternalImports": true,
+            "enforceBuildableLibDependency": true,
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "type:api",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": ["type:data-access", "type:ui", "type:util"]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": []
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": []
               }
             ]
           }
