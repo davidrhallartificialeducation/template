@@ -1,6 +1,6 @@
 import { getGreeting } from '../support/app.po';
 
-describe('my-app-e2e', () => {
+describe('template-expo-app-e2e', () => {
   beforeEach(() => cy.visit('/'));
 
   it('should display welcome message', () => {

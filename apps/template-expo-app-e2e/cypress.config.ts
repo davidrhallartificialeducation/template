@@ -6,7 +6,7 @@ export default defineConfig({
   e2e: {
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
-      webServerCommands: { default: 'nx run my-app:serve' },
+      webServerCommands: { default: 'nx run template-expo-app:serve' },
     }),
     baseUrl: 'http://localhost:8081',
   },

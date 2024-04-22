@@ -1,0 +1,24 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "_comment": "This config was generated using 'stryker init'. Please see the guide for more information: https://stryker-mutator.io/docs/stryker-js/guides/react",
+  "testRunner": "jest",
+  "reporters": [
+    "progress",
+    "clear-text",
+    "html"
+  ],
+  "coverageAnalysis": "off",
+  "jest": {
+    "configFile": "./apps/template-expo-app/jest.config.ts",
+    "projectType": "custom"
+  },
+
+  "ignorePatterns": [
+    "apps/template-expo-app/**/*",
+    "!apps/template-expo-app/jest.config.ts",
+    "!apps/template-expo-app/test-setup.ts"
+  ],
+  "mutate": [
+    "apps/**/*.tsx"
+  ]
+}

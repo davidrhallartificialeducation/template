@@ -1,7 +1,7 @@
 import { getJestProjectsAsync } from '@nx/jest';
 
 export default async () => ({
-  automock: true,
+  automock: false,
   bail: 1,
   clearMocks: true,
   coverageThreshold: {

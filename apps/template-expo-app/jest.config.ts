@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'my-app',
+  displayName: 'template-expo-app',
   resolver: '@nx/jest/plugins/resolver',
   preset: 'jest-expo',
   moduleFileExtensions: ['ts', 'js', 'html', 'tsx', 'jsx'],
